@@ -4,119 +4,139 @@
     {
       "code": "005930",
       "name": "삼성전자",
-      "as_of": "2026-09-10",
+      "as_of": "2026-09-15",
       "summary": {
-        "text": "2025년 연간 결산과 2024년 결산을 비교한 초기 조사입니다. 분기별 최신 흐름과 현재 주가 판단은 추가 확인이 필요합니다.",
-        "source": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260310002820"
+        "text": "2026년 상반기 누적 실적을 공식 발표 자료로 갱신했습니다. 연결 기준 1~2분기 누적 매출은 약 305.4조원, 영업이익은 약 146.7조원입니다. 전년 상반기 대비 AI 메모리 중심의 DS 실적 개선이 전사 이익 증가를 주도했습니다. 현재 수급·주가·적정주가는 확인하지 않아 조사 필요로 남겼습니다.",
+        "source": "https://news.samsung.com/kr/삼성전자-2026년-2분기-실적-발표"
       },
       "business": {
-        "text": "스마트폰·TV·가전 등 완제품과 메모리·시스템 반도체, 디스플레이, 자동차 전장·오디오 사업을 함께 운영합니다. 전사 이익을 읽을 때는 반도체만의 변화와 다른 사업의 변화를 나누어 확인해야 합니다.",
-        "source": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260310002820"
+        "text": "반도체(DS: 메모리, 시스템LSI, 파운드리), 스마트폰·네트워크·TV·생활가전(DX), 디스플레이, 자동차 전장·오디오(Harman) 등으로 사업을 운영합니다. 2026년 2분기에는 DS 매출 127.5조원·영업이익 89.2조원, DX 매출 48조원·영업이익 -0.8조원, Harman 매출 4.6조원·영업이익 0.4조원, 디스플레이 매출 7.5조원·영업이익 0.7조원을 기록했습니다. DS에서는 DRAM·NAND 최대 판매와 HBM4/HBM4E 확대가 핵심입니다.",
+        "source": "https://news.samsung.com/kr/삼성전자-2026년-2분기-실적-발표"
       },
       "financial": {
-        "period": "2025-12",
-        "prior_period": "2024-12",
-        "basis": "연결",
+        "period": "2026-06",
+        "prior_period": "2025-06",
+        "basis": "연결, 상반기 누적",
         "currency": "KRW",
         "unit": "억원",
-        "revenue": 3336059.38,
-        "prior_revenue": 3008709.03,
-        "operating_profit": 436010.51,
-        "prior_operating_profit": 327259.61,
-        "source": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260310002820"
+        "revenue": 3054000,
+        "prior_revenue": 1537400,
+        "operating_profit": 1467000,
+        "prior_operating_profit": 114000,
+        "source": "https://news.samsung.com/kr/삼성전자-2026년-1분기-실적-발표; https://news.samsung.com/kr/삼성전자-2026년-2분기-실적-발표; https://news.samsung.com/kr/삼성전자-2025년-1분기-실적-발표; https://news.samsung.com/kr/삼성전자-2025년-2분기-실적-발표"
       },
       "peers": {
-        "period": "2025-12",
-        "basis": "연결",
-        "currency": "KRW",
-        "unit": "억원",
-        "source": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260310002820",
-        "selection_reason": "메모리 관련 국내 기업 2개 표본의 전사 영업이익 비교입니다. 삼성전자는 완제품 등 다른 사업을 포함하므로 메모리 사업 경쟁력 순위로 해석하지 않습니다.",
+        "period": "2026-06 또는 각사 최신 공식 실적",
+        "basis": "연결/각사 회계기준",
+        "currency": "KRW 및 USD",
+        "unit": "억원 및 USD million",
+        "source": "https://news.skhynix.com/en/q2-2026-business-results/; https://investors.micron.com/node/50671/pdf",
+        "selection_reason": "메모리 반도체 사업의 직접 경쟁 구도를 보기 위해 SK하이닉스와 Micron을 비교 표본으로 추가했습니다. 삼성전자는 메모리 외 사업 비중이 크므로 전사 영업이익만으로 메모리 경쟁력 순위를 판단하지 않습니다. Micron은 회계연도가 달라 기간이 완전히 일치하지 않습니다.",
         "rows": [
           {
             "name": "삼성전자",
-            "operating_profit": 436010.51,
-            "period": "2025-12",
-            "basis": "연결",
+            "operating_profit": 1467000,
+            "period": "2026-06",
+            "basis": "연결, 상반기 누적",
             "currency": "KRW",
             "unit": "억원",
-            "source": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260310002820"
+            "source": "https://news.samsung.com/kr/삼성전자-2026년-2분기-실적-발표"
           },
           {
             "name": "SK하이닉스",
-            "operating_profit": 472063.19,
-            "period": "2025-12",
-            "basis": "연결",
+            "operating_profit": 981529,
+            "period": "2026-06",
+            "basis": "연결, 상반기 누적",
             "currency": "KRW",
             "unit": "억원",
-            "source": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260317000635"
+            "source": "https://news.skhynix.com/en/q2-2026-business-results/"
+          },
+          {
+            "name": "Micron Technology",
+            "operating_profit": 55589,
+            "period": "2026-05",
+            "basis": "GAAP, 9개월 누적",
+            "currency": "USD",
+            "unit": "USD million",
+            "source": "https://investors.micron.com/node/50671/pdf"
           }
         ]
       },
       "data_gaps": [
-        "최신 2026년 분기 누적 실적 추가 조사",
-        "현재 수급·수정주가 시계열 미수집",
-        "적정주가 가정과 현 주가 대조 필요",
-        "주력사업별 매출 비중 추가 대조"
+        "현재 수급 데이터 미확인 — 조사 필요",
+        "현재 수정주가 및 가격 시계열 미확인 — 조사 필요",
+        "적정주가 산정 가정과 현재 주가 대조 미실시 — 조사 필요",
+        "사업부별 상반기 누적 매출·영업이익의 상세 대조 필요",
+        "경쟁사별 회계연도 차이를 보정한 동일기간 수익성 비교 필요"
       ]
     },
     {
       "code": "000660",
       "name": "SK하이닉스",
-      "as_of": "2026-09-10",
+      "as_of": "2026-09-15",
       "summary": {
-        "text": "2025년 연간 결산과 2024년 결산을 비교한 초기 조사입니다. 분기별 최신 흐름과 현재 주가 판단은 추가 확인이 필요합니다.",
-        "source": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260317000635"
+        "text": "2026년 상반기 누적 실적을 공식 발표 자료로 갱신했습니다. 연결 기준 누적 매출은 약 131.895조원, 영업이익은 약 98.153조원입니다. HBM·AI 서버 DRAM·eSSD 등 고부가 제품 판매와 메모리 가격 상승이 실적을 견인했습니다. 현재 수급·주가·적정주가는 확인하지 않아 조사 필요로 남겼습니다.",
+        "source": "https://news.skhynix.com/en/q2-2026-business-results/"
       },
       "business": {
-        "text": "DRAM과 NAND 등 메모리 반도체를 주요 제품으로 공급합니다. 고대역폭 메모리(HBM)와 서버용 제품 수요를 확인하되, 메모리 가격·출하량·제품 구성의 변화가 실제 이익으로 연결됐는지 대조해야 합니다.",
-        "source": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260317000635"
+        "text": "DRAM과 NAND Flash를 중심으로 메모리 반도체를 공급하며, HBM·고용량 서버 DRAM·eSSD 등 AI 데이터센터용 고부가 제품 비중을 확대하고 있습니다. 2026년 2분기에는 HBM4 양산 출하를 시작했고, 하반기 생산 확대를 계획했습니다. NAND에서는 321단 제품 생산 비중을 확대하고 있으며 Solidigm과의 시너지를 활용해 고용량 QLC eSSD 경쟁력을 강화하고 있습니다.",
+        "source": "https://news.skhynix.com/en/q2-2026-business-results/"
       },
       "financial": {
-        "period": "2025-12",
-        "prior_period": "2024-12",
-        "basis": "연결",
+        "period": "2026-06",
+        "prior_period": "2025-06",
+        "basis": "연결, 상반기 누적",
         "currency": "KRW",
         "unit": "억원",
-        "revenue": 971466.75,
-        "prior_revenue": 661929.6,
-        "operating_profit": 472063.19,
-        "prior_operating_profit": 234673.19,
-        "source": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260317000635"
+        "revenue": 1318950,
+        "prior_revenue": 398711,
+        "operating_profit": 981529,
+        "prior_operating_profit": 166534,
+        "source": "https://news.skhynix.com/en/q1-2026-business-results/; https://news.skhynix.com/en/q2-2026-business-results/"
       },
       "peers": {
-        "period": "2025-12",
-        "basis": "연결",
-        "currency": "KRW",
-        "unit": "억원",
-        "source": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260317000635",
-        "selection_reason": "메모리 관련 국내 기업 2개 표본의 전사 영업이익 비교입니다. 삼성전자는 완제품 등 다른 사업을 포함하므로 메모리 사업 경쟁력 순위로 해석하지 않습니다.",
+        "period": "2026-06 또는 각사 최신 공식 실적",
+        "basis": "연결/각사 회계기준",
+        "currency": "KRW 및 USD",
+        "unit": "억원 및 USD million",
+        "source": "https://news.skhynix.com/en/q2-2026-business-results/; https://news.samsung.com/kr/삼성전자-2026년-2분기-실적-발표; https://investors.micron.com/node/50671/pdf",
+        "selection_reason": "DRAM·NAND·HBM 시장의 주요 글로벌 경쟁사인 삼성전자와 Micron을 비교 표본으로 선정했습니다. 삼성전자는 비메모리 사업 비중이 크고 Micron은 회계연도가 달라 전사 영업이익의 단순 순위 비교는 제한적입니다.",
         "rows": [
           {
-            "name": "삼성전자",
-            "operating_profit": 436010.51,
-            "period": "2025-12",
-            "basis": "연결",
+            "name": "SK하이닉스",
+            "operating_profit": 981529,
+            "period": "2026-06",
+            "basis": "연결, 상반기 누적",
             "currency": "KRW",
             "unit": "억원",
-            "source": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260310002820"
+            "source": "https://news.skhynix.com/en/q2-2026-business-results/"
           },
           {
-            "name": "SK하이닉스",
-            "operating_profit": 472063.19,
-            "period": "2025-12",
-            "basis": "연결",
+            "name": "삼성전자",
+            "operating_profit": 1467000,
+            "period": "2026-06",
+            "basis": "연결, 상반기 누적",
             "currency": "KRW",
             "unit": "억원",
-            "source": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260317000635"
+            "source": "https://news.samsung.com/kr/삼성전자-2026년-2분기-실적-발표"
+          },
+          {
+            "name": "Micron Technology",
+            "operating_profit": 55589,
+            "period": "2026-05",
+            "basis": "GAAP, 9개월 누적",
+            "currency": "USD",
+            "unit": "USD million",
+            "source": "https://investors.micron.com/node/50671/pdf"
           }
         ]
       },
       "data_gaps": [
-        "최신 2026년 분기 누적 실적 추가 조사",
-        "현재 수급·수정주가 시계열 미수집",
-        "적정주가 가정과 현 주가 대조 필요",
-        "주력사업별 매출 비중 추가 대조"
+        "현재 수급 데이터 미확인 — 조사 필요",
+        "현재 수정주가 및 가격 시계열 미확인 — 조사 필요",
+        "적정주가 산정 가정과 현재 주가 대조 미실시 — 조사 필요",
+        "HBM·DRAM·NAND별 상반기 매출 및 수익성 상세 수치 추가 대조 필요",
+        "경쟁사별 동일 통화·동일 기간 기준의 수익성 비교 필요"
       ]
     }
   ]
