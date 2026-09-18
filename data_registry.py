@@ -5,6 +5,7 @@ import time
 from dataclasses import dataclass, field
 from datetime import datetime
 from urllib.parse import unquote
+from xml.etree import ElementTree
 from zoneinfo import ZoneInfo
 
 import requests
@@ -96,7 +97,27 @@ def health(spec: ProviderSpec) -> dict:
                 params={"serviceKey": key, "resultType": "json", "numOfRows": 1},
                 timeout=(5, 12),
             )
-            response.raise_for_status()
+            # The public-data gateway frequently returns XML for authentication
+            # and service errors even when JSON was requested. Surface only the
+            # safe gateway code/message; never include the request URL or key.
+            if response.content.lstrip().startswith(b"<"):
+                try:
+                    root = ElementTree.fromstring(response.content)
+                    reason = root.findtext(".//returnReasonCode") or root.findtext(".//resultCode")
+                    auth = root.findtext(".//returnAuthMsg") or root.findtext(".//resultMsg")
+                    known = {
+                        "20": "서비스 접근 거절",
+                        "22": "호출 한도 초과",
+                        "30": "등록되지 않은 인증키",
+                        "31": "인증키 사용기간 만료",
+                        "32": "허용되지 않은 IP",
+                    }
+                    detail = known.get(str(reason), auth or "XML 오류 응답")
+                    return _result(spec.provider_id, "error", f"게이트웨이 {reason or response.status_code} · {detail}", started)
+                except ElementTree.ParseError:
+                    return _result(spec.provider_id, "error", f"HTTP {response.status_code} · XML 응답 해석 실패", started)
+            if response.status_code >= 400:
+                return _result(spec.provider_id, "error", f"HTTP {response.status_code}", started)
             payload = response.json()
             code = str(payload.get("response", {}).get("header", {}).get("resultCode", ""))
             if code in {"00", "0"}:
