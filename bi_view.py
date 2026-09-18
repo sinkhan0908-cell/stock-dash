@@ -6,24 +6,24 @@ import altair as alt
 import pandas as pd
 import streamlit as st
 
-GOLD = '#b1883c'
-TEAL = '#37867b'
-INK = '#493e2f'
+GOLD = '#2563EB'
+TEAL = '#0F766E'
+INK = '#0F172A'
 
 
 def theme():
     st.markdown('''<style>
-    .stApp{background:#f8f6f1;color:#352e25}
-    [data-testid="stSidebar"]{background:#eee7da!important}
-    [data-testid="stSidebar"] *{color:#493e2f!important}
+    .stApp{background:#F7F9FC;color:#0F172A}
+    [data-testid="stSidebar"]{background:#FFFFFF!important;border-right:1px solid #E6EAF0}
+    [data-testid="stSidebar"] *{color:#0F172A!important}
     .block-container{max-width:1400px;padding-top:2rem}
-    [data-testid="stVerticalBlockBorderWrapper"]>div{border-color:#e7e0d3!important;border-radius:16px!important;background:#fffdf9}
+    [data-testid="stVerticalBlockBorderWrapper"]>div{border-color:#E6EAF0!important;border-radius:16px!important;background:#FFFFFF}
     [data-testid="stMetric"]{background:#fffdf9;border:1px solid #e7e0d3;border-radius:14px;padding:18px 22px}
-    [data-testid="stMetricValue"]{font-family:Georgia,serif;color:#715625}
-    .stButton>button[kind="primary"]{background:#9a742f;border-color:#9a742f;color:white}
-    .px-eyebrow{font-size:13px;letter-spacing:2px;color:#98763a;margin:0 0 5px}
-    .px-business{padding:20px 22px;border-left:3px solid #b1883c;background:#f4efe4;border-radius:0 12px 12px 0;font-size:16px;line-height:1.8}
-    h1,h2,h3{color:#493e2f!important;letter-spacing:-.03em}
+    [data-testid="stMetricValue"]{font-family:Georgia,serif;color:#0F172A}
+    .stButton>button[kind="primary"]{background:#2563EB;border-color:#2563EB;color:white}
+    .px-eyebrow{font-size:13px;letter-spacing:2px;color:#2563EB;margin:0 0 5px}
+    .px-business{padding:20px 22px;border-left:3px solid #2563EB;background:#F8FAFC;border-radius:0 12px 12px 0;font-size:16px;line-height:1.8}
+    h1,h2,h3{color:#0F172A!important;letter-spacing:-.03em}
     </style>''', unsafe_allow_html=True)
 
 
