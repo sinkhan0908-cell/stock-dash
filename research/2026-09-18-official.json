@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "reports": [
+    {
+      "code": "005930",
+      "name": "삼성전자",
+      "as_of": "2026-09-18",
+      "summary": {
+        "text": "삼성전자는 메모리 반도체뿐 아니라 스마트폰·TV·생활가전·디스플레이·전장까지 영위하는 종합 전자회사입니다. 2026년 2분기에는 DS부문의 DRAM·NAND 판매 호조와 AI 메모리 수요로 분기 매출 171.5조원, 영업이익 89.5조원을 기록했습니다. 2026년 상반기 누적 매출은 305.37조원, 영업이익은 146.73조원입니다.",
+        "source": "https://news.samsung.com/kr/삼성전자-2026년-2분기-실적-발표"
+      },
+      "business": {
+        "text": "주요 사업은 DS(Device Solutions)와 DX(Device eXperience)이며, 디스플레이와 하만의 전장·오디오 사업도 포함합니다. DS에는 메모리·시스템LSI·파운드리가 있고, DX에는 스마트폰·TV·생활가전·네트워크가 있습니다. 2026년 2분기 DS는 매출 127.5조원, 영업이익 89.2조원을 기록했으며 HBM4 공급 확대와 HBM4E 샘플 출하를 진행했습니다.",
+        "source": "https://news.samsung.com/kr/삼성전자-2026년-2분기-실적-발표"
+      },
+      "financial": {
+        "period": "2026-06",
+        "prior_period": "2025-06",
+        "basis": "K-IFRS 연결, 누적 1~6월",
+        "currency": "KRW",
+        "unit": "조원",
+        "revenue": 305.3729,
+        "prior_revenue": 153.7068,
+        "operating_profit": 146.7252,
+        "prior_operating_profit": 11.3613,
+        "revenue_growth_pct": 98.67,
+        "operating_profit_growth_pct": 1191.45,
+        "source": "https://www.samsung.com/sec/ir/reports-disclosures/public-disclosure/4015/",
+        "calculation": "2026 상반기 누계 매출 305.3729조원 / 2025 상반기 153.7068조원, 영업이익 146.7252조원 / 11.3613조원. 성장률=(당기 누적/전년동기 누적-1)×100. 삼성전자 2026-07-30 공시의 잠정 누계실적 기준."
+      },
+      "flow": {
+        "start": null,
+        "end": null,
+        "unit": "억원",
+        "foreign": null,
+        "institution": null,
+        "source": "https://data.krx.co.kr/",
+        "status": "미확인",
+        "note": "2026-09-18 기준 KRX 공식 원문에서 외국인·기관 순매수의 요청 기간과 누적 금액을 추출·검증하지 못했습니다. 수치를 추정하지 않았습니다."
+      },
+      "valuation": {
+        "low": null,
+        "base": null,
+        "high": null,
+        "current_price": null,
+        "price_date": null,
+        "method": "미확인",
+        "source": "https://www.samsung.com/sec/ir/main/",
+        "note": "현재 공식 시세와 재현 가능한 평가식 입력값을 같은 기준일로 검증하지 못했습니다. 임의의 목표주가를 기록하지 않았습니다."
+      },
+      "prices": {
+        "adjusted": true,
+        "source": "https://data.krx.co.kr/",
+        "rows": [],
+        "status": "미확인",
+        "trend": null,
+        "note": "최소 61거래일 수정종가와 21개 완료 주봉을 공식 원문에서 확보·검증하지 못했습니다. 일봉·주봉 추세를 산출하지 않았습니다."
+      },
+      "peers": {
+        "period": "2026-06",
+        "basis": "동일 2026년 상반기 누적·연결 기준·영업이익",
+        "currency": "KRW",
+        "unit": "억원",
+        "selection_reason": "메모리 반도체 직접 경쟁 구도를 보기 위해 삼성전자와 SK하이닉스를 동일 기간·통화·단위로 비교합니다. Micron은 회계기간이 달라 이 표의 정규 순위에서 제외합니다.",
+        "source": "https://news.skhynix.com/en/q2-2026-business-results/",
+        "rows": [
+          {
+            "name": "삼성전자",
+            "operating_profit": 1467252,
+            "period": "2026-06",
+            "basis": "K-IFRS 연결 누적",
+            "currency": "KRW",
+            "unit": "억원",
+            "source": "https://www.samsung.com/sec/ir/reports-disclosures/public-disclosure/4015/"
+          },
+          {
+            "name": "SK하이닉스",
+            "operating_profit": 981529,
+            "period": "2026-06",
+            "basis": "K-IFRS 연결 누적",
+            "currency": "KRW",
+            "unit": "억원",
+            "source": "https://news.skhynix.com/en/q2-2026-business-results/"
+          }
+        ],
+        "ranking_status": "표본 내 단순 영업이익 비교 가능",
+        "ranking_note": "동일 2026년 상반기·원화·연결 기준으로 삼성전자 146.7252조원, SK하이닉스 98.1529조원입니다. 이는 전사 영업이익의 표본 비교이며 메모리 사업 경쟁력의 순위를 의미하지 않습니다."
+      },
+      "data_gaps": [
+        "외국인·기관 수급: KRX 공식 원문에서 동일 기간 수치 미확인",
+        "현재 수정주가 및 61거래일 이상 일봉: 미확인",
+        "완료 주봉 21주 이상: 미확인",
+        "적정주가: 현재가격과 평가식 입력값 검증 미완료",
+        "Micron과의 동일기간·동일기준 경쟁사 비교: 회계기간 차이로 정규 순위에서 제외"
+      ]
+    },
+    {
+      "code": "000660",
+      "name": "SK하이닉스",
+      "as_of": "2026-09-18",
+      "summary": {
+        "text": "SK하이닉스는 DRAM과 NAND Flash 중심의 메모리 반도체 기업이며 HBM, AI 서버용 DRAM, eSSD 등 고부가 제품을 확대하고 있습니다. 2026년 2분기 매출 79.3187조원, 영업이익 60.5426조원을 기록했고 상반기 누적 매출은 131.8950조원, 영업이익은 98.1529조원입니다.",
+        "source": "https://news.skhynix.com/en/q2-2026-business-results/"
+      },
+      "business": {
+        "text": "주요 사업은 DRAM과 NAND Flash입니다. HBM은 AI 연산용 고대역폭 메모리이고, 서버 DRAM과 eSSD도 핵심 제품군입니다. 회사는 2026년 2분기 HBM4 양산 출하를 시작했으며 하반기 생산 확대를 계획했습니다. NAND에서는 321단 제품 비중을 확대하고 있습니다.",
+        "source": "https://news.skhynix.com/en/q2-2026-business-results/"
+      },
+      "financial": {
+        "period": "2026-06",
+        "prior_period": "2025-06",
+        "basis": "K-IFRS 연결, 누적 1~6월",
+        "currency": "KRW",
+        "unit": "조원",
+        "revenue": 131.895,
+        "prior_revenue": 39.8711,
+        "operating_profit": 98.1529,
+        "prior_operating_profit": 16.6534,
+        "revenue_growth_pct": 230.9,
+        "operating_profit_growth_pct": 489.42,
+        "source": "https://news.skhynix.com/en/q2-2026-business-results/",
+        "calculation": "2026 상반기 매출 52.5763+79.3187=131.8950조원, 2025 상반기 17.6391+22.2320=39.8711조원. 2026 상반기 영업이익 37.6103+60.5426=98.1529조원, 2025 상반기 7.4405+9.2129=16.6534조원. 성장률=(당기 누적/전년동기 누적-1)×100."
+      },
+      "flow": {
+        "start": null,
+        "end": null,
+        "unit": "억원",
+        "foreign": null,
+        "institution": null,
+        "source": "https://data.krx.co.kr/",
+        "status": "미확인",
+        "note": "2026-09-18 기준 KRX 공식 원문에서 외국인·기관 순매수의 요청 기간과 누적 금액을 추출·검증하지 못했습니다. 수치를 추정하지 않았습니다."
+      },
+      "valuation": {
+        "low": null,
+        "base": null,
+        "high": null,
+        "current_price": null,
+        "price_date": null,
+        "method": "미확인",
+        "source": "https://www.skhynix.com/ir/UI-FR-IR01/",
+        "note": "현재 공식 시세와 재현 가능한 평가식 입력값을 같은 기준일로 검증하지 못했습니다. 임의의 목표주가를 기록하지 않았습니다."
+      },
+      "prices": {
+        "adjusted": true,
+        "source": "https://data.krx.co.kr/",
+        "rows": [],
+        "status": "미확인",
+        "trend": null,
+        "note": "최소 61거래일 수정종가와 21개 완료 주봉을 공식 원문에서 확보·검증하지 못했습니다. 일봉·주봉 추세를 산출하지 않았습니다."
+      },
+      "peers": {
+        "period": "2026-06",
+        "basis": "동일 2026년 상반기 누적·연결 기준·영업이익",
+        "currency": "KRW",
+        "unit": "억원",
+        "selection_reason": "DRAM·NAND·HBM의 직접 경쟁 구도를 보기 위해 삼성전자와 SK하이닉스를 동일 기간·통화·단위로 비교합니다. Micron은 회계기간이 달라 이 표의 정규 순위에서 제외합니다.",
+        "source": "https://www.samsung.com/sec/ir/reports-disclosures/public-disclosure/4015/",
+        "rows": [
+          {
+            "name": "삼성전자",
+            "operating_profit": 1467252,
+            "period": "2026-06",
+            "basis": "K-IFRS 연결 누적",
+            "currency": "KRW",
+            "unit": "억원",
+            "source": "https://www.samsung.com/sec/ir/reports-disclosures/public-disclosure/4015/"
+          },
+          {
+            "name": "SK하이닉스",
+            "operating_profit": 981529,
+            "period": "2026-06",
+            "basis": "K-IFRS 연결 누적",
+            "currency": "KRW",
+            "unit": "억원",
+            "source": "https://news.skhynix.com/en/q2-2026-business-results/"
+          }
+        ],
+        "ranking_status": "표본 내 단순 영업이익 비교 가능",
+        "ranking_note": "동일 2026년 상반기·원화·연결 기준으로 삼성전자 146.7252조원, SK하이닉스 98.1529조원입니다. 이는 전사 영업이익의 표본 비교이며 메모리 사업 경쟁력의 순위를 의미하지 않습니다."
+      },
+      "data_gaps": [
+        "외국인·기관 수급: KRX 공식 원문에서 동일 기간 수치 미확인",
+        "현재 수정주가 및 61거래일 이상 일봉: 미확인",
+        "완료 주봉 21주 이상: 미확인",
+        "적정주가: 현재가격과 평가식 입력값 검증 미완료",
+        "Micron과의 동일기간·동일기준 경쟁사 비교: 회계기간 차이로 정규 순위에서 제외"
+      ]
+    }
+  ]
+}
