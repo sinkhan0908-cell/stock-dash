@@ -7,6 +7,94 @@ from ui_v2 import market_header
 from automatic import brief
 from bi_view import theme, overview, detail, peers_chart
 from chat_research import published, parse_bundle, trends, growth, request_text
+from providers import DataError, Official
+
+
+def _quote_number(value):
+    try:
+        return float(str(value).replace(',', ''))
+    except (TypeError, ValueError):
+        return None
+
+
+def _quote_from_row(code, name, price, price_date, row):
+    """Normalize the official daily quote without inventing unavailable fields."""
+    change=_quote_number(row.get('vs'))
+    rate=_quote_number(row.get('fltRt'))
+    return {
+        'code':code,
+        'name':name,
+        'price':price,
+        'date':price_date,
+        'change':change,
+        'rate':rate,
+        'open':_quote_number(row.get('mkp')),
+        'high':_quote_number(row.get('hipr')),
+        'low':_quote_number(row.get('lopr')),
+        'volume':_quote_number(row.get('trqu')),
+    }
+
+
+def _display_quote_date(value):
+    text=str(value or '-')
+    return f'{text[:4]}-{text[4:6]}-{text[6:8]}' if len(text)==8 and text.isdigit() else text
+
+
+@st.cache_data(ttl=300, show_spinner=False)
+def _official_quotes(codes):
+    provider=Official()
+    quotes={}
+    errors={}
+    today=date.today()
+    for code in codes:
+        try:
+            price,price_date,name=provider.price(code,today)
+            row=provider.price_rows.get((code,today.isoformat()),{})
+            quotes[code]=_quote_from_row(code,name,price,price_date,row)
+        except DataError as error:
+            errors[code]=str(error)
+    return quotes,errors
+
+
+def render_quotes(stocks):
+    valid=[code for code in stocks if len(code)==6 and code.isdigit()]
+    st.markdown('<div class="section-heading"><div class="mark">₩</div><div><h2>현재 주식 시세</h2><p>금융위원회 주식시세정보의 최근 거래일 종가입니다.</p></div></div>',unsafe_allow_html=True)
+    if not valid:
+        st.info('6자리 종목코드를 확인하면 공식 시세가 표시됩니다.')
+        return
+    quotes,errors=_official_quotes(tuple(valid))
+    cols=st.columns(min(2,len(valid)),gap='small')
+    for index,code in enumerate(valid):
+        stock=stocks[code]
+        with cols[index % len(cols)]:
+            with st.container(border=True):
+                q=quotes.get(code)
+                st.markdown(f"**{stock['name']}** · `{code}`")
+                if not q:
+                    report=stock.get('report') or {}
+                    snapshot=stock.get('price_snapshot')
+                    if not snapshot and report.get('price'):
+                        snapshot={'price':report['price'],'date':report.get('price_date')}
+                    if snapshot and snapshot.get('price'):
+                        st.metric('저장된 기준 종가',f"{snapshot['price']:,.0f}원")
+                        st.caption('기준일 '+_display_quote_date(snapshot.get('date'))+' · 새 시세 조회 실패')
+                    else:
+                        st.info('시세 조회 필요')
+                    if errors.get(code): st.caption(errors[code])
+                    continue
+                delta=None if q['change'] is None else f"{q['change']:+,.0f}원"
+                if q['rate'] is not None:
+                    delta=(delta+' · ' if delta else '')+f"{q['rate']:+.2f}%"
+                st.metric('최근 종가',f"{q['price']:,.0f}원",delta=delta)
+                items=[]
+                for label,key in [('시가','open'),('고가','high'),('저가','low')]:
+                    if q[key] is not None: items.append(f"{label} {q[key]:,.0f}원")
+                if items: st.caption(' · '.join(items))
+                volume=f" · 거래량 {q['volume']:,.0f}주" if q['volume'] is not None else ''
+                st.caption(f"기준일 {_display_quote_date(q['date'])}{volume} · 실시간 체결가 아님")
+    if st.button('시세 새로고침',key='refresh_official_quotes'):
+        _official_quotes.clear()
+        st.rerun()
 
 
 def render_research(store, state, sample_mode):
@@ -45,6 +133,8 @@ def render_research(store, state, sample_mode):
         details[key]=(stock,r,trend,frame)
 
     overview(details,st.session_state.get('account_snapshot'))
+
+    render_quotes(stocks)
 
     st.markdown('<div class="info-grid">',unsafe_allow_html=True)
     col1,col2,col3=st.columns([1.1,1,1],gap='small')
