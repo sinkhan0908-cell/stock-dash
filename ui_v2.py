@@ -241,10 +241,15 @@ section[data-testid="stSidebar"] .planx-brand-sub { color:#806e50; font-size:13p
   .planx-card { min-height:100px; padding:14px; }
   .planx-card-value { font-size:23px; }
 }
+.market-header{background:#fff;border:1px solid #E6EAF0;border-radius:18px;padding:14px 16px;margin-bottom:18px;box-shadow:0 8px 24px rgba(15,23,42,.03)} .market-header-title{display:flex;align-items:baseline;gap:9px;margin-bottom:11px}.market-header-title span{font-size:11px;font-weight:800;letter-spacing:.12em;color:#2563EB}.market-header-title small{font-size:11px;color:#94A3B8}.market-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.market-ticker{border:1px solid #EEF2F7;border-radius:13px;padding:13px 15px;background:#FBFCFE}.market-ticker-top{display:flex;justify-content:space-between;font-size:13px;color:#334155}.market-ticker-top span{font-size:10px;color:#92400E;background:#FFFBEB;border:1px solid #FDE68A;border-radius:999px;padding:3px 7px}.market-value{margin-top:7px;font-size:24px;font-weight:800;color:#0F172A}.market-meta{margin-top:5px;font-size:10px;color:#94A3B8}@media(max-width:640px){.market-grid{grid-template-columns:1fr}.market-value{font-size:21px}}
 </style>
 """,
         unsafe_allow_html=True,
     )
+
+
+def market_header():
+    st.markdown('''<div class="market-header"><div class="market-header-title"><span>MARKET</span><small>시장 시황</small></div><div class="market-grid"><div class="market-ticker"><div class="market-ticker-top"><b>KOSDAQ</b><span>연결 대기</span></div><div class="market-value">—</div><div class="market-meta">등락률 · — &nbsp;|&nbsp; 거래대금 · —</div></div><div class="market-ticker"><div class="market-ticker-top"><b>NASDAQ</b><span>연결 대기</span></div><div class="market-value">—</div><div class="market-meta">등락률 · — &nbsp;|&nbsp; 거래대금 · —</div></div></div></div>''', unsafe_allow_html=True)
 
 
 def brand():
